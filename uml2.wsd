@@ -1,24 +1,18 @@
 @startuml
-
 class Controller {
-    -public static function
-    #public static function
-    *public static function
-    +public static function
-    #public static function
-    +public function
     ~StartSite()
     +BookList()
-    *getBookList()
+    *getBookList() 
     -getBook()
-    -bookOne()
+    #bookOne()
     +error404()
 }
 
 class Model {
-    -public static function
-    #public static function
     ~getBookList()
     +getBook()
 }
+
+Controller::getBookList --> Model::getBookList
+Model::getbook --> Controller::getBook
 @enduml

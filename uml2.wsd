@@ -1,0 +1,24 @@
+@startuml
+
+class Controller {
+    -public static function
+    #public static function
+    *public static function
+    +public static function
+    #public static function
+    +public function
+    ~StartSite()
+    +BookList()
+    *getBookList()
+    -getBook()
+    -bookOne()
+    +error404()
+}
+
+class Model {
+    -public static function
+    #public static function
+    ~getBookList()
+    +getBook()
+}
+@enduml
